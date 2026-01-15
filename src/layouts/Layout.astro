@@ -11,7 +11,13 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>i8 fun - Download Real Money Game For Android 2026</title>
+		
+		<!-- Inline critical CSS -->
 		<style>
+			:root {
+				--color-primary: #25D007;
+			}
+			
 			html, body {
 				margin: 0;
 				width: 100%;
@@ -19,6 +25,10 @@ import "../styles/global.css";
 				font-family: system-ui, -apple-system, sans-serif;
 			}
 		</style>
+		
+		<!-- Defer Tailwind and other styles -->
+		<link rel="preload" href="/styles/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="/styles/global.css"></noscript>
 	</head>
 	<body>
 		<slot />
