@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Non-critical styles - can be deferred */
+/* Keep hover states, animations, and non-critical colors here */
+
 :root {
   --color-primary: #25D007;
 }
+
+/* Additional global styles that aren't critical for FCP */
