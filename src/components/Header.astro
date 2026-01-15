@@ -3,8 +3,7 @@ import { Image } from 'astro:assets';
 import logo from '../assets/logo.webp';
 ---
 
-<header class="w-full bg-white ">
-  {/* Dark top bar */}
+<header class="w-full bg-white">
   
   {/* Main header */}
   <div class="px-6 py-4 lg:px-12 max-w-7xl mx-auto">
@@ -23,7 +22,6 @@ import logo from '../assets/logo.webp';
 
       {/* Navigation */}
       <nav class="hidden md:flex items-center gap-8">
-        
         <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
           Download
         </a>
@@ -54,7 +52,11 @@ import logo from '../assets/logo.webp';
       </nav>
 
       {/* Mobile menu button */}
-      <button class="md:hidden text-black" aria-label="Toggle navigation menu">
+      <button 
+        id="mobile-menu-btn"
+        class="md:hidden text-black" 
+        aria-label="Toggle navigation menu"
+      >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -64,6 +66,63 @@ import logo from '../assets/logo.webp';
 
   {/* Bottom border line */}
   <div class="h-px bg-gray-200"></div>
+
+  {/* Mobile Sheet */}
+  <div 
+    id="mobile-sheet"
+    class="fixed inset-0 z-40 md:hidden transform transition-transform duration-300 ease-in-out translate-x-full"
+  >
+    {/* Overlay */}
+    <div 
+      id="sheet-overlay"
+      class="absolute inset-0"
+    ></div>
+
+    {/* Sheet Content */}
+    <div class="absolute right-0 top-0 h-full w-64 bg-white shadow-lg flex flex-col">
+      <div class="px-6 py-4 border-b border-gray-200">
+        <button 
+          id="close-sheet-btn"
+          class="text-black"
+          aria-label="Close menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-0 flex-1 overflow-y-auto">
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          Download
+        </a>
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          Blogs
+        </a>
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          Register
+        </a>
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          Login
+        </a>
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          Deposit
+        </a>
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          Withdraw
+        </a>
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          Contact Us
+        </a>
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          Privacy Policy
+        </a>
+        <a href="#" class="px-6 py-3 text-base font-medium text-black hover:bg-gray-100 hover:text-primary transition-colors">
+          About Us
+        </a>
+      </nav>
+    </div>
+  </div>
 </header>
 
 <style>
@@ -79,3 +138,29 @@ import logo from '../assets/logo.webp';
     background-color: var(--color-primary);
   }
 </style>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileSheet = document.getElementById('mobile-sheet');
+  const closeSheetBtn = document.getElementById('close-sheet-btn');
+  const sheetOverlay = document.getElementById('sheet-overlay');
+  const sheetLinks = mobileSheet?.querySelectorAll('nav a');
+
+  function openSheet() {
+    mobileSheet?.classList.remove('translate-x-full');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSheet() {
+    mobileSheet?.classList.add('translate-x-full');
+    document.body.style.overflow = 'auto';
+  }
+
+  mobileMenuBtn?.addEventListener('click', openSheet);
+  closeSheetBtn?.addEventListener('click', closeSheet);
+  sheetOverlay?.addEventListener('click', closeSheet);
+
+  sheetLinks?.forEach(link => {
+    link.addEventListener('click', closeSheet);
+  });
+</script>
