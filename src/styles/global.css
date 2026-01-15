@@ -1,8 +1,22 @@
-@import "tailwindcss";
+/* Critical reset and layout styles only */
 
-/* Non-critical styles - can be deferred */
-/* Keep hover states, animations, and non-critical colors here */
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+/* Critical color variables */
 :root {
   --color-primary: #25D007;
 }
