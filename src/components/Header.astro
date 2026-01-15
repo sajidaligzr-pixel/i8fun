@@ -1,0 +1,73 @@
+---
+import logo from '../assets/logo.webp';
+---
+
+<header class="w-full bg-white ">
+  {/* Dark top bar */}
+  
+  {/* Main header */}
+  <div class="px-6 py-4 lg:px-12 max-w-7xl mx-auto">
+    <div class="flex items-center justify-between gap-8">
+      {/* Logo */}
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <img src={logo.src} alt="i8 fun Logo" class="h-16 w-auto" />
+      </div>
+
+      {/* Navigation */}
+      <nav class="hidden md:flex items-center gap-8">
+        
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          Download
+        </a>
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          Blogs
+        </a>
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          Register
+        </a>
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          Login
+        </a>
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          Deposit
+        </a>
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          Withdraw
+        </a>
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          Contact Us
+        </a>
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          Privacy Policy
+        </a>
+        <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
+          About Us
+        </a>
+      </nav>
+
+      {/* Mobile menu button */}
+      <button class="md:hidden text-black">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {/* Bottom border line */}
+  <div class="h-px bg-gray-200"></div>
+</header>
+
+<style>
+  :root {
+    --color-primary: #25D007;
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+</style>
