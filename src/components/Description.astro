@@ -1,5 +1,11 @@
 ---
 // No client-side interactivity needed for this component
+import { Image } from 'astro:assets';
+import detailImage from '../assets/I8fun-detail.webp';
+import gamesImage from '../assets/i8fun-games.webp';
+import registerImage from '../assets/I8fun-register.webp';
+import depositImage from '../assets/I8fun-deposit.webp';
+import featuresImage from '../assets/I8fun-features.webp';
 ---
 
 <section class="w-full bg-white py-12 px-4">
@@ -14,7 +20,22 @@
         I8 Fun is a very entertaining game application in Pakistan through which you can play different games to earn real money. The interface of this application is very friendly; in fact, it was designed in a way that can be easily used by anyone, even a beginner. You don't need to be so good at gaming in order to play I8 Fun. I8 Fun provides short game matches which are very easy and entertaining to play during your free time activities.
       
       </p>
-        <p class="text-base text-gray-700 leading-relaxed mb-8">
+
+      <div class="my-8 flex justify-center">
+        <div class="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={detailImage}
+            alt="i8 fun App Icon"
+            class="w-full h-full object-cover"
+            width={600}
+            height={600}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+
+      <p class="text-base text-gray-700 leading-relaxed mb-8">
          Through this application, you can also select your favourite game, like the playing cards game and mine game, along with other entertaining games. The application runs very smoothly without the complexity of buttons; therefore, it is very easy to find the game to play from it. The primary purpose of the I8 Fun application is enjoyment and entertainment only. Many people prefer using it because it is very light in use and executes very quickly.
               </p>
 
@@ -36,6 +57,20 @@
       <p class="text-base text-gray-700 leading-relaxed mb-8">
         Due to its comprehensible format, free download, and easy payment options, many people prefer the use of I8 Game to other gaming apps that consume so many resources. It is designed for entertainment, thrills, and earning, all through one platform.
       </p>
+
+      <div class="my-8 flex justify-center">
+        <div class="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={featuresImage}
+            alt="i8 fun Features"
+            class="w-full h-full object-cover"
+            width={600}
+            height={600}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
 
       <h2 class="text-2xl font-bold  mt-8 mb-4">Features of I8 Fun</h2>
 
@@ -116,10 +151,26 @@
         </ul>
       </div>
 
+ 
+
       <h2 class="text-2xl font-bold  mt-8 mb-4">List of Games in I8 Fun Game</h2>
       <p class="text-base text-gray-700 leading-relaxed mb-8">
         I8 Fun Game offers many fun games that can be easily played, along with giving a chance to win real money through these games. Even a newcomer can easily grasp the concept of these games.
       </p>
+
+      <div class="my-8 flex justify-center">
+        <div class="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={gamesImage}
+            alt="i8 fun Games"
+            class="w-full h-full object-cover"
+            width={600}
+            height={600}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
 
       <div class="games-list">
         <h3 class="text-xl font-semibold  mt-6 mb-3 text-[#1a5c00]">Slot Machines</h3>
@@ -201,6 +252,20 @@
         Some users may get an OTP code. Enter the code to complete registration. A welcome bonus is added automatically.
       </p>
 
+      <div class="my-8 flex justify-center">
+        <div class="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={registerImage}
+            alt="i8 fun Register"
+            class="w-full h-full object-cover"
+            width={600}
+            height={600}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+
       <h2 class="text-2xl font-bold  mt-8 mb-4">How to Log In to I8 Fun Game</h2>
       <p class="text-base text-gray-700 leading-relaxed mb-8">
         Logging in is very easy:
@@ -225,6 +290,20 @@
         <li>Confirm the payment</li>
         <li>Your balance will be added quickly.</li>
       </ol>
+
+      <div class="my-8 flex justify-center">
+        <div class="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={depositImage}
+            alt="i8 fun Deposit"
+            class="w-full h-full object-cover"
+            width={600}
+            height={600}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
 
       <h2 class="text-2xl font-bold  mt-8 mb-4">How to Withdraw Money from I8 Fun Game</h2>
       <p class="text-base text-gray-700 leading-relaxed mb-8">
