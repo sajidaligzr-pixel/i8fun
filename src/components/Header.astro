@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import logo from '../assets/logo.webp';
 ---
 
@@ -10,11 +11,13 @@ import logo from '../assets/logo.webp';
     <div class="flex items-center justify-between gap-8">
       {/* Logo */}
       <div class="flex items-center gap-2 flex-shrink-0">
-        <img 
-          src={logo.src} 
+        <Image 
+          src={logo} 
           alt="i8 fun Logo" 
           class="h-16 w-auto"
-          sizes="(max-width: 640px) 80px, 64px"
+          width={300}
+          height={120}
+          fetchpriority="low"
         />
       </div>
 
