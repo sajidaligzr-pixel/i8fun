@@ -2,26 +2,24 @@
 import logo from '../assets/logo.webp';
 ---
 
-<header class="w-full bg-white ">
-  {/* Dark top bar */}
-  
-  {/* Main header */}
+<header class="w-full bg-white">
   <div class="px-6 py-4 lg:px-12 max-w-7xl mx-auto">
     <div class="flex items-center justify-between gap-8">
-      {/* Logo */}
+      {/* Logo with optimized responsive images */}
       <div class="flex items-center gap-2 flex-shrink-0">
         <img 
           src={logo.src} 
           alt="i8 fun Logo" 
           class="h-16 w-auto"
-          sizes="(max-width: 640px) 80px, 64px"
-          fetchpriority="low"
+          width="280"
+          height="112"
+          loading="eager"
+          decoding="sync"
         />
       </div>
 
       {/* Navigation */}
       <nav class="hidden md:flex items-center gap-8">
-        
         <a href="#" class="text-base font-medium text-black hover:text-primary transition-colors">
           Download
         </a>
@@ -73,7 +71,8 @@ import logo from '../assets/logo.webp';
     color: var(--color-primary);
   }
 
-  .bg-primary {
-    background-color: var(--color-primary);
+  /* Optimize hover transitions */
+  a {
+    will-change: color;
   }
 </style>
