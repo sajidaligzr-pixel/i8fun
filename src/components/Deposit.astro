@@ -1,0 +1,77 @@
+---
+// No client-side interactivity needed for this component
+import { Image } from 'astro:assets';
+import depositImage from '../assets/I8fun-deposit.webp';
+---
+
+<section class="w-full bg-gray-50 py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    {/* Header */}
+    <div class="mb-8 relative">
+      <div class="bg-slate-900 text-white py-4 px-8 rounded-lg relative">
+        {/* Primary accent left */}
+        <div class="absolute left-0 top-0 w-4 h-full bg-[#25D007] rounded-l-lg"></div>
+        {/* Primary accent right */}
+        <div class="absolute right-0 top-0 w-4 h-full bg-[#25D007] rounded-r-lg"></div>
+
+        <h2 class="text-2xl font-bold text-center relative z-10">
+          How to Deposit and Withdraw Money from I8 Fun
+        </h2>
+      </div>
+    </div>
+
+    {/* Main Content */}
+    <div class="p-8 bg-white rounded-lg shadow-lg">
+      <p class="text-base text-gray-700 leading-relaxed mb-6">
+        There are many casino apps on the internet where you can make real cash through deposit and withdrawal processes, such as I8 Fun. It was recently launched for Pakistani online gaming lovers looking to earn money by playing games. In addition, it offers a variety of casino games, including Aviator, Mines, Chicken Road, and others. The interface is easy and works smoothly on every Android phone. It also provides bonuses and rewards like weekly bonuses, monthly bonuses, first-time registration bonuses, and more. That's why it's trending in Pakistan.
+      </p>
+
+      <h3 class="text-xl font-bold mb-4">Safety Measures</h3>
+      <p class="text-base text-gray-700 leading-relaxed mb-4">
+        Here are some safety measures you should follow before transferring or receiving your money. Always follow them to protect your funds.
+      </p>
+      <ul class="list-disc list-inside text-base text-gray-700 leading-relaxed mb-6 space-y-2">
+        <li>Always check the account number before sending money.</li>
+        <li>Use Easypaisa or JazzCash to deposit or withdraw your funds.</li>
+        <li>Use the game app, never the web version, as there's a bit of risk in the web version.</li>
+        <li>Always deposit or withdraw a small amount first, as larger amounts involve more risk.</li>
+      </ul>
+        <div class="flex justify-center mt-8">
+        <div class="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={depositImage}
+            alt="I8 Fun Deposit and Withdraw Interface"
+            class="w-full h-full object-cover"
+            width={600}
+            height={600}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+
+      <h3 class="text-xl font-bold mb-4">How to Deposit Money at I8 Fun</h3>
+      <p class="text-base text-gray-700 leading-relaxed mb-4">
+        Depositing money is very easy, as simple as eating a cake. Follow the steps below to add funds to your game account.
+      </p>
+      <ol class="list-decimal list-inside text-base text-gray-700 leading-relaxed mb-6 space-y-2">
+        <li>Open your game account. At the bottom left side, find the deposit button and click it. Wait a few seconds for the page to reload.</li>
+        <li>Add your account number for JazzCash, Easypaisa, or bank transfer.</li>
+        <li>You will receive a notification. Click Accept to complete the deposit.</li>
+      </ol>
+
+      <h3 class="text-xl font-bold mb-4">How to Withdraw Money from I8 Fun</h3>
+      <p class="text-base text-gray-700 leading-relaxed mb-4">
+        Withdrawing money is straightforward. Follow these steps to take out your earnings.
+      </p>
+      <ol class="list-decimal list-inside text-base text-gray-700 leading-relaxed mb-6 space-y-2">
+        <li>Open the I8 Fun game and go to the withdrawal section.</li>
+        <li>Select the method you want to withdraw to, such as JazzCash, Easypaisa, or Bank Transfer. Click it and add your account number.</li>
+        <li>Enter the amount you want to withdraw. The minimum withdrawal limit is 50,000, so ensure you withdraw 50,000 or less.</li>
+      </ol>
+
+      {/* Image */}
+    
+    </div>
+  </div>
+</section>

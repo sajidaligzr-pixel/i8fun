@@ -1,0 +1,133 @@
+---
+// No client-side interactivity needed for this component
+import { Image } from 'astro:assets';
+import banner from '../assets/banner.webp';
+---
+
+<section class="w-full bg-gray-50 py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    {/* Hero Header */}
+    <div class="mb-8 relative">
+      <div class="bg-slate-900 text-white py-4 px-8 rounded-lg relative">
+        {/* Primary accent left */}
+        <div class="absolute left-0 top-0 w-4 h-full bg-[#25D007] rounded-l-lg"></div>
+        {/* Primary accent right */}
+        <div class="absolute right-0 top-0 w-4 h-full bg-[#25D007] rounded-r-lg"></div>
+
+        <h1 class="text-2xl font-bold text-center relative z-10">
+          Download I8 Fun Game + Login / Registration (2026)
+        </h1>
+        <div class="flex justify-center mt-4">
+          <button class="bg-[#25D007] hover:bg-[#1fa005] text-black font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors">
+            Download I8 Fun APK
+            <span>⬇</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {/* Banner Image */}
+    <div class="mb-8 flex justify-center">
+      <div class="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
+        <Image
+          src={banner}
+          alt="I8 Fun Game Banner"
+          class="w-full h-full object-cover"
+          width={600}
+          height={600}
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+
+    {/* Intro and Download CTA */}
+    <div class="border-4 border-slate-900 rounded-2xl p-8 bg-white mb-8">
+      <p class="text-base text-gray-700 leading-relaxed mb-6">
+        Download the latest I8 Fun Game APK (2026) and get started right away. Tap Download I8 Fun to install the newest version on Android. Once it’s installed, open the app and start playing.
+      </p>
+      <p class="text-base text-gray-700 leading-relaxed mb-6">
+        Already have an account? Use Login to enter quickly, or hit Register to create a new account with your mobile number and OTP. Keep your details correct so you don’t face issues later. Click Download APK now and start playing today.
+      </p>
+    </div>
+
+    {/* Download Details Table */}
+    <div class="border-4 border-slate-900 rounded-2xl p-8 bg-white mb-8">
+      <h2 class="text-xl font-bold mb-6">I8 Fun Game Download Details</h2>
+      <table class="w-full border-collapse">
+        <tbody>
+          <tr class="border-b border-gray-300 bg-white">
+            <td class="border-r border-gray-300 p-4 font-semibold text-gray-800 bg-gray-50 w-1/3">Version</td>
+            <td class="p-4 text-gray-700">v2.1.0</td>
+          </tr>
+          <tr class="border-b border-gray-300 bg-gray-50">
+            <td class="border-r border-gray-300 p-4 font-semibold text-gray-800 bg-gray-100">File Size</td>
+            <td class="p-4 text-gray-700">5.0 MB</td>
+          </tr>
+          <tr class="border-b border-gray-300 bg-white">
+            <td class="border-r border-gray-300 p-4 font-semibold text-gray-800 bg-gray-50">Android Requirement</td>
+            <td class="p-4 text-gray-700">Android 5+</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="border-r border-gray-300 p-4 font-semibold text-gray-800 bg-gray-100">Last Updated</td>
+            <td class="p-4 text-gray-700">2 hours ago</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Installation Guide */}
+    <div class="border-4 border-slate-900 rounded-2xl p-8 bg-white mb-8">
+      <h2 class="text-xl font-bold mb-6">How to Install the APK (Android)</h2>
+      <ol class="list-decimal list-inside text-base text-gray-700 leading-relaxed space-y-2">
+        <li>Download the APK file using the button above.</li>
+        <li>Open Settings → Security/Privacy on your phone.</li>
+        <li>Enable "Install unknown apps" for your browser (Chrome) or File Manager.</li>
+        <li>Tap the downloaded APK and press Install.</li>
+        <li>Open the app and continue to Register / Login.</li>
+      </ol>
+    </div>
+
+    {/* Troubleshooting */}
+    <div class="border-4 border-slate-900 rounded-2xl p-8 bg-white mb-8">
+      <h2 class="text-xl font-bold mb-6">Common Issues and Fixes</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold text-gray-800">OTP Not Received?</h3>
+          <ul class="list-disc list-inside text-base text-gray-700 leading-relaxed space-y-1">
+            <li>Check your signal and try again after a minute.</li>
+            <li>Turn airplane mode on/off, then request OTP again.</li>
+            <li>Restart your phone.</li>
+            <li>Confirm you typed the correct number (same SIM).</li>
+          </ul>
+          <p class="text-sm text-red-600 mt-2">Important: Never share your OTP with anyone.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">APK Installation Issues</h3>
+          <ul class="list-disc list-inside text-base text-gray-700 leading-relaxed space-y-1">
+            <li>App not installed: Free up storage and try again.</li>
+            <li>Delete the old version, restart your phone, then install the latest.</li>
+            <li>Parse error: Update Android if possible.</li>
+            <li>Installed but not opening: Uninstall, reboot, then reinstall.</li>
+          </ul>
+          <p class="text-sm text-gray-600 mt-2">Avoid installing from multiple sources.</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Safety and Conclusion */}
+    <div class="border-4 border-slate-900 rounded-2xl p-8 bg-white">
+      <h2 class="text-xl font-bold mb-6">Is It Safe to Download?</h2>
+      <p class="text-base text-gray-700 leading-relaxed mb-6">
+        Yes, if you download from a trusted link. Avoid modded or edited APKs shared in random places. Those often cause login problems, missing features, or account risk.
+      </p>
+      <h3 class="font-semibold text-gray-800 mb-4">Account Safety Tips</h3>
+      <ul class="list-disc list-inside text-base text-gray-700 leading-relaxed space-y-1 mb-6">
+        <li>Use your own details for withdrawals (Easypaisa/JazzCash/crypto wallet).</li>
+        <li>Don’t buy or sell accounts.</li>
+        <li>Don’t use unknown hack apps or scripts—these often cause bans.</li>
+      </ul>
+   
+    </div>
+  </div>
+</section>
