@@ -10,7 +10,13 @@ import ReferralComponent from '../components/Referralprogram.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
+<link rel="canonical" href={Astro.url} />
+
+
+<Layout 
+  title="Referral Program - i8 fun | Earn Rewards by Inviting Friends"
+  description="Join the i8 fun referral program and earn rewards by inviting friends. Get bonus cash for every successful referral and grow your earnings."
+>
   <Header />
   <main>
     <ReferralComponent />
