@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.webp';
+---
+
+<footer class="w-full bg-white border-t border-gray-200 py-8 px-4 mt-12">
+  <div class="max-w-7xl mx-auto">
+    {/* Main Footer Content */}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      {/* Logo and Description */}
+      <div>
+        <a href="/" class="inline-block mb-4 mr-20">
+          <Image 
+            src={logo} 
+            alt="i8 fun Logo" 
+            class="h-16 w-auto"
+            width={300}
+            height={120}
+            loading="lazy"
+          />
+        </a>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          I8 Fun is a popular gaming platform in Pakistan where you can play exciting casino games and earn real money.
+        </p>
+      </div>
+
+      {/* Quick Links */}
+      <div>
+        <h3 class="text-lg font-bold mb-4 text-black">Quick Links</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="/" class="text-sm text-gray-700 hover:text-[#25D007] transition-colors">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/download" class="text-sm text-gray-700 hover:text-[#25D007] transition-colors">
+              Download
+            </a>
+          </li>
+          <li>
+            <a href="/login" class="text-sm text-gray-700 hover:text-[#25D007] transition-colors">
+              Login
+            </a>
+          </li>
+          <li>
+            <a href="/deposit-and-withdraw" class="text-sm text-gray-700 hover:text-[#25D007] transition-colors">
+              Deposit & Withdraw
+            </a>
+          </li>
+          <li>
+            <a href="/referral-program" class="text-sm text-gray-700 hover:text-[#25D007] transition-colors">
+              Referral Program
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Legal Links */}
+      <div>
+        <h3 class="text-lg font-bold mb-4 text-black">Legal</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="/privacy-policy" class="text-sm text-gray-700 hover:text-[#25D007] transition-colors">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="/terms-and-conditions" class="text-sm text-gray-700 hover:text-[#25D007] transition-colors">
+              Terms & Conditions
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+
+    {/* Divider */}
+    <div class="h-px bg-gray-200 mb-6"></div>
+
+    {/* Bottom Section */}
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-gray-600 text-center md:text-left">
+        © 2026 I8 Fun. All rights reserved.
+      </p>
+      
+      <p class="text-xs text-gray-500 text-center md:text-right max-w-md">
+        Play responsibly. Must be 18+ years old. Gambling can be addictive.
+      </p>
+    </div>
+  </div>
+</footer>

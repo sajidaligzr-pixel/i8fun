@@ -1,0 +1,17 @@
+---
+import Header from '../components/Header.astro';
+import TermsandServices from '../components/TermsandServices.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<link rel="canonical" href={Astro.url} />
+
+<Layout 
+  title="Terms and Conditions - I8 Fun | Platform Rules"
+  description="Read the I8 Fun terms and conditions to understand your rights and responsibilities. Learn about eligibility, user conduct, transactions, and platform policies."
+>
+  <Header />
+  <main>
+    <TermsandServices />
+  </main>
+</Layout>
