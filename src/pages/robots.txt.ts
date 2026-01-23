@@ -13,7 +13,7 @@ Disallow: /
 User-agent: BuiltWithBot
 Disallow: /
 
-Sitemap: https://i8fun.vercel.app/sitemap.xml
+Sitemap: https://i8fungame.net/sitemap.xml
 `;
 
   return new Response(body.trim(), {

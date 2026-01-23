@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://i8fun.vercel.app",
+  site: "https://i8fungame.net",
   output: "static",
   integrations: [sitemap()],
   vite: {
