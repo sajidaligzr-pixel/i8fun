@@ -13,7 +13,7 @@ Disallow: /
 User-agent: BuiltWithBot
 Disallow: /
 
-Sitemap: https://i8fungame.net/sitemap.xml
+Sitemap: https://i8fungame.net/sitemap-index.xml
 `;
 
   return new Response(body.trim(), {
